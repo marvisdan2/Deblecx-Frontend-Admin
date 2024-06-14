@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 // CUSTOM COMPONENTS
 import Loadable from "./Loadable";
 import RootLayout from "@/layouts/root/RootLayout";
+import NewPage from "@/pages/NewPage";
 
 // ROLE BASED PERMISSION TEST PAGE
 const Permission = Loadable(lazy(() => import("@/pages/permission")));
@@ -22,7 +23,7 @@ const AboutUsOne = Loadable(lazy(() => import("@/pages/about-us/about-us-1")));
 
 const Products = Loadable(lazy(() => import("@/pages/shops/products")));
 const ProductDetails = Loadable(
-  lazy(() => import("@/pages/shops/product-details")),
+  lazy(() => import("@/pages/shops/product-details"))
 );
 
 export const PublicRoutes = [
@@ -36,6 +37,7 @@ export const PublicRoutes = [
       </RootLayout>
     ),
     children: [
+      { path: "new-page", element: <NewPage /> },
       { path: "about-us", element: <AboutUsOne /> },
       { path: "contact-us", element: <ContactUs /> },
       { path: "faqs", element: <Faqs /> },
