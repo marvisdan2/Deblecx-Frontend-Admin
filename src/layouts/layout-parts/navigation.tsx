@@ -31,22 +31,6 @@ export const navigations: Navigations[] = [
     ],
   },
   {
-    name: "Finance",
-    icon: duotone.MessagesDollar,
-    children: [
-      { name: "Finance 1", path: "/dashboard/finance" },
-      { name: "Finance 2", path: "/dashboard/finance-2" },
-    ],
-  },
-  {
-    name: "CRM",
-    icon: duotone.CommentsQuestionCheck,
-    children: [
-      { name: "CRM", path: "/dashboard/crm" },
-      { name: "CRM 2", path: "/dashboard/crm-2" },
-    ],
-  },
-  {
     name: "Sales",
     icon: duotone.Ecommerce,
     children: [
@@ -54,29 +38,7 @@ export const navigations: Navigations[] = [
       { name: "Sales 2", path: "/dashboard/sales-2" },
     ],
   },
-  {
-    name: "Ecommerce",
-    path: "/dashboard/ecommerce",
-    icon: duotone.RectangleCirclePlus,
-  },
-  {
-    name: "Logistics",
-    path: "/dashboard/logistics",
-    icon: duotone.DiagramProject,
-  },
-  { name: "Marketing", path: "/dashboard/marketing", icon: duotone.LayerGroup },
-  {
-    name: "LMS",
-    path: "/dashboard/learning-management",
-    icon: duotone.PersonCircleCheck,
-  },
-  {
-    name: "Job Management",
-    path: "/dashboard/job-management",
-    icon: duotone.PersonCircleCheck,
-  },
 
-  { type: "label", label: "Management" },
   { name: "Profile", icon: duotone.UserProfile, path: "/dashboard/profile" },
   { name: "Account", icon: duotone.Accounts, path: "/dashboard/account" },
   {
@@ -90,46 +52,7 @@ export const navigations: Navigations[] = [
       { name: "User Grid 2", path: "/dashboard/user-grid-2" },
     ],
   },
-  {
-    name: "Products",
-    icon: duotone.AdminEcommerce,
-    children: [
-      { name: "Product List", path: "/dashboard/product-list" },
-      { name: "Product Grid", path: "/dashboard/product-grid" },
-      { name: "Create Product", path: "/dashboard/create-product" },
-      { name: "Product Details", path: "/dashboard/product-details" },
-    ],
-  },
-  {
-    name: "Invoice",
-    icon: duotone.Invoice,
-    children: [
-      { name: "Invoice List", path: "/dashboard/invoice-list" },
-      { name: "Invoice Details", path: "/dashboard/invoice-details" },
-      { name: "Create Invoice", path: "/dashboard/create-invoice" },
-    ],
-  },
-  {
-    name: "Ecommerce",
-    icon: duotone.Ecommerce,
-    children: [
-      { name: "Cart", path: "/dashboard/cart" },
-      { name: "Payment", path: "/dashboard/payment" },
-      { name: "Billing Address", path: "/dashboard/billing-address" },
-      { name: "Payment Complete", path: "/dashboard/payment-complete" },
-    ],
-  },
-  {
-    name: "Projects",
-    icon: duotone.ProjectChart,
-    children: [
-      { name: "Project 1", path: "/dashboard/projects/version-1" },
-      { name: "Project 2", path: "/dashboard/projects/version-2" },
-      { name: "Project 3", path: "/dashboard/projects/version-3" },
-      { name: "Project Details", path: "/dashboard/projects/details" },
-      { name: "Team Member", path: "/dashboard/projects/team-member" },
-    ],
-  },
+
   {
     name: "Data Table",
     icon: duotone.DataTable,
@@ -137,35 +60,13 @@ export const navigations: Navigations[] = [
   },
 
   { type: "label", label: "Apps" },
-  {
-    name: "Todo List",
-    icon: duotone.TodoList,
-    path: "/dashboard/todo-list",
-  },
-  {
-    name: "Chats",
-    icon: duotone.Chat,
-    path: "/dashboard/chat",
-  },
-  {
-    name: "Email",
-    icon: duotone.Inbox,
-    children: [
-      { name: "Inbox", path: "/dashboard/mail/all" },
-      { name: "Email Details", path: "/dashboard/mail/details" },
-      { name: "Create Email", path: "/dashboard/mail/compose" },
-    ],
-  },
+
   {
     name: "Pages",
     icon: duotone.Pages,
     children: [
       { name: "About", path: "/dashboard/about" },
-      { name: "Career", path: "/dashboard/career" },
-      { name: "Career Apply", path: "/dashboard/career-apply" },
       { name: "Support", path: "/dashboard/support" },
-      { name: "Create Ticket", path: "/dashboard/create-ticket" },
-      { name: "File Manager", path: "/dashboard/file-manager" },
     ],
   },
   {
