@@ -1,0 +1,30 @@
+FROM node:17-alpine as builder
+
+# set working directory
+WORKDIR /app
+
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm ci --silent
+
+# add app
+COPY . ./
+
+
+# let docker access to node_modules/.vite
+RUN chown -R node:node /app/node_modules/.vite
+
+# Grant permissions for to our scripts to be executable
+ENTRYPOINT ["sh", "/docker-entrypoint.sh"]
+
+RUN npm run build
+
+# production environment
+FROM nginx:stable-alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

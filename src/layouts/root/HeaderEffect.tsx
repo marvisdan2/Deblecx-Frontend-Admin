@@ -27,4 +27,3 @@ export default function HeaderEffect({ children }: PropsWithChildren) {
     </StyledRoot>
   );
 }
-w
