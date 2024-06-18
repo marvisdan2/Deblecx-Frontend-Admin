@@ -108,7 +108,7 @@ export default function Section1() {
 
             <Button
               variant="outlined"
-              onClick={() => navigate("/dashboard/ecommerce")}
+              onClick={() => navigate("/dashboard/")}
               sx={{ paddingInline: 3, paddingBlock: 1 }}
             >
               View Demo

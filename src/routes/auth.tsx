@@ -11,9 +11,6 @@ const ForgetPassword = Loadable(
 );
 
 // DIFFERENT AUTH DEMO PAGES
-const LoginDemoWithAuth0 = Loadable(
-  lazy(() => import("@/pages/auth-demo/auth0/login"))
-);
 const LoginDemoWithJWT = Loadable(
   lazy(() => import("@/pages/auth-demo/jwt/login"))
 );
@@ -40,7 +37,6 @@ export const AuthRoutes = [
   },
 
   // DIFFERENT AUTH DEMO PAGES ROUTES
-  { path: "auth0/login", element: <LoginDemoWithAuth0 /> },
   { path: "jwt/login", element: <LoginDemoWithJWT /> },
   { path: "jwt/register", element: <RegisterDemoWithJWT /> },
   { path: "firebase/login", element: <LoginDemoWithFirebase /> },
