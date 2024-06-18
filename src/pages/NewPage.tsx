@@ -1,12 +1,13 @@
 import axios from "axios";
-import React from "react";
 
 const getConnector = async () => {
-  const res = await fetch(
-    "http://localhost:8080/api/dms/shipping/appointment/dropship"
+  const res = await axios.get(
+    "https://bender-api-internal.dev.deblecx.com/api/internal/connector/",
+    {
+      withCredentials: true,
+    }
   );
-  console.log(await res.json());
-  return res.json();
+  return res.data;
 };
 function NewPage() {
   getConnector();
