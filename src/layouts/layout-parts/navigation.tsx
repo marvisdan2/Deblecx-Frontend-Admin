@@ -37,34 +37,13 @@ export const navigations: Navigations[] = [
   {
     name: "Analytics",
     icon: duotone.PersonChalkboard,
-    children: [
-      { name: "Analytics 1", path: "/dashboard" },
-      { name: "Analytics 2", path: "/dashboard/analytics-2" },
-    ],
+    children: [{ name: "Analytics 1", path: "/dashboard" }],
   },
   {
     name: "Sales",
     icon: duotone.Ecommerce,
-    children: [
-      { name: "Sales", path: "/dashboard/sales" },
-      { name: "Sales 2", path: "/dashboard/sales-2" },
-    ],
+    children: [{ name: "Sales", path: "/dashboard/sales" }],
   },
-
-  { name: "Profile", icon: duotone.UserProfile, path: "/dashboard/profile" },
-  { name: "Account", icon: duotone.Accounts, path: "/dashboard/account" },
-  {
-    name: "Users",
-    icon: duotone.UserList,
-    children: [
-      { name: "Add User", path: "/dashboard/add-user" },
-      { name: "User List 1", path: "/dashboard/user-list" },
-      { name: "User Grid 1", path: "/dashboard/user-grid" },
-      { name: "User List 2", path: "/dashboard/user-list-2" },
-      { name: "User Grid 2", path: "/dashboard/user-grid-2" },
-    ],
-  },
-
   {
     name: "Data Table",
     icon: duotone.DataTable,

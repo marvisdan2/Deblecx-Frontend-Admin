@@ -8,9 +8,6 @@ import NewPage from "@/pages/NewPage";
 // ROLE BASED PERMISSION TEST PAGE
 const Permission = Loadable(lazy(() => import("@/pages/permission")));
 
-// FEATURES RELATED PAGES
-const ContactUs = Loadable(lazy(() => import("@/pages/contact-us")));
-
 export const PublicRoutes = [
   { path: "permission", element: <Permission /> },
   {
@@ -19,9 +16,6 @@ export const PublicRoutes = [
         <Outlet />
       </RootLayout>
     ),
-    children: [
-      { path: "new-page", element: <NewPage /> },
-      { path: "contact-us", element: <ContactUs /> },
-    ],
+    children: [{ path: "new-page", element: <NewPage /> }],
   },
 ];
