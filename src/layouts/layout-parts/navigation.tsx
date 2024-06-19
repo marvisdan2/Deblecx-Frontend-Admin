@@ -3,7 +3,6 @@ import { SvgIconProps } from "@mui/material/SvgIcon";
 // CUSTOM ICON COMPONENT
 import duotone from "@/icons/duotone";
 
-// ==============================================================
 interface NavItem {
   type: string;
   name: string;
@@ -18,10 +17,23 @@ interface NavItem {
 }
 
 export type Navigations = Partial<NavItem>;
-// ==============================================================
 
 export const navigations: Navigations[] = [
   { type: "label", label: "Dashboard" },
+  {
+    name: "Connectors",
+    icon: duotone.UserList,
+    children: [
+      {
+        name: "Errors",
+        children: [
+          { name: "Resume", path: "/dashboard/connectors/errors/resume" },
+          { name: "Alert", path: "/dashboard/connectors/errors/alert" },
+        ],
+      },
+    ],
+  },
+
   {
     name: "Analytics",
     icon: duotone.PersonChalkboard,
@@ -57,54 +69,5 @@ export const navigations: Navigations[] = [
     name: "Data Table",
     icon: duotone.DataTable,
     children: [{ name: "Data Table 1", path: "/dashboard/data-table-1" }],
-  },
-
-  { type: "label", label: "Apps" },
-
-  {
-    name: "Pages",
-    icon: duotone.Pages,
-    children: [
-      { name: "About", path: "/dashboard/about" },
-      { name: "Support", path: "/dashboard/support" },
-    ],
-  },
-  {
-    type: "extLink",
-    name: "Documentation",
-    icon: duotone.FileCircleQuestion,
-    path: "https://uko-doc.vercel.app/",
-  },
-
-  { type: "label", label: "Others" },
-  {
-    path: "https://uko-doc.vercel.app/",
-    name: "Item Disabled",
-    icon: duotone.Folder,
-    disabled: true,
-  },
-  {
-    name: "Multi Level Item",
-    icon: duotone.Apps,
-    children: [
-      { name: "Level A", path: "#dashboard/cart" },
-      {
-        iconText: "B",
-        name: "Level B",
-        path: "#dashboard/payment",
-        children: [
-          { name: "Level B1", path: "#dashboard/payment" },
-          {
-            iconText: "B",
-            name: "Level B2",
-            path: "#dashboard/payment",
-            children: [
-              { name: "Level B21", path: "#dashboard/payment" },
-              { name: "Level B22", path: "#dashboard/payment" },
-            ],
-          },
-        ],
-      },
-    ],
   },
 ];

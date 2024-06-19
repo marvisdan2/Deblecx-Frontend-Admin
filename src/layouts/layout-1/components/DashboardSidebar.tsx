@@ -59,9 +59,6 @@ export default function DashboardSidebar() {
         <Box height="100%" px={2}>
           {/* NAVIGATION ITEMS */}
           <MultiLevelMenu sidebarCompact={!!COMPACT} />
-
-          {/* USER ACCOUNT INFO */}
-          {!COMPACT ? <UserAccount /> : null}
         </Box>
       </Scrollbar>
     </SidebarWrapper>

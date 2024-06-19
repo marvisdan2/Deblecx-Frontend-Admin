@@ -39,23 +39,6 @@ const DataTable1 = Loadable(
   lazy(() => import("@/pages/dashboard/data-tables/table-1"))
 );
 
-//  PROJECT PAGES
-const ProjectV1 = Loadable(
-  lazy(() => import("@/pages/dashboard/projects/version-1"))
-);
-const ProjectV2 = Loadable(
-  lazy(() => import("@/pages/dashboard/projects/version-2"))
-);
-const ProjectV3 = Loadable(
-  lazy(() => import("@/pages/dashboard/projects/version-3"))
-);
-const ProjectDetails = Loadable(
-  lazy(() => import("@/pages/dashboard/projects/details"))
-);
-const TeamMember = Loadable(
-  lazy(() => import("@/pages/dashboard/projects/team-member"))
-);
-
 const ActiveLayout = () => {
   const { settings } = useSettings();
 
@@ -92,13 +75,15 @@ export const DashboardRoutes = [
       { path: "data-table-1", element: <DataTable1 /> },
 
       {
-        path: "projects",
+        path: "connectors",
         children: [
-          { path: "version-1", element: <ProjectV1 /> },
-          { path: "version-2", element: <ProjectV2 /> },
-          { path: "version-3", element: <ProjectV3 /> },
-          { path: "details", element: <ProjectDetails /> },
-          { path: "team-member", element: <TeamMember /> },
+          {
+            path: "errors",
+            children: [
+              { path: "resume", element: <>Resume</> },
+              { path: "alert", element: <>Alert</> },
+            ],
+          },
         ],
       },
     ],
