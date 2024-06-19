@@ -26,9 +26,6 @@ export default function DashboardLayoutV1({ children }: PropsWithChildren) {
 
         {/* MAIN CONTENT RENDER SECTION */}
         {children || <Outlet />}
-
-        {/* LAYOUT SETTING SECTION */}
-        <LayoutSetting />
       </LayoutBodyWrapper>
     </LayoutProvider>
   );
