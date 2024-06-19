@@ -10,7 +10,6 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-
   preview: {
     port: 3001,
     strictPort: true,

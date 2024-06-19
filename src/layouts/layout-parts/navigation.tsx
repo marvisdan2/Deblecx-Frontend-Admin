@@ -23,14 +23,14 @@ export const navigations: Navigations[] = [
   {
     name: "Connectors",
     icon: duotone.UserList,
+    path: "/dashboard/connectors/",
+  },
+  {
+    name: "Errors",
+    icon: duotone.PersonChalkboard,
     children: [
-      {
-        name: "Errors",
-        children: [
-          { name: "Resume", path: "/dashboard/connectors/errors/resume" },
-          { name: "Alert", path: "/dashboard/connectors/errors/alert" },
-        ],
-      },
+      { name: "Resume", path: "/dashboard/connectors/errors/resume" },
+      { name: "Alert", path: "/dashboard/connectors/errors/alert" },
     ],
   },
 
