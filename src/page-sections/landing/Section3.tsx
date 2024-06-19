@@ -28,9 +28,7 @@ import { H2, Paragraph } from "@/components/typography";
 import useNavigate from "@/hooks/useNavigate";
 // CUSTOM PAGE SECTION COMPONENTS
 import LiveUser from "@/page-sections/dashboards/analytics/LiveUser";
-import ReturnRate from "@/page-sections/dashboards/ecommerce/ReturnRate";
 import CompleteGoal from "@/page-sections/dashboards/analytics/CompleteGoal";
-import DailyVisitors from "@/page-sections/dashboards/ecommerce/DailyVisitors";
 import SessionBrowser from "@/page-sections/dashboards/analytics/SessionBrowser";
 
 export default function Section3() {
@@ -181,14 +179,8 @@ export default function Section3() {
 
               <CompleteGoal chart="area" />
 
-              <DailyVisitors />
-
               <div>
                 <LiveUser />
-              </div>
-
-              <div>
-                <ReturnRate />
               </div>
             </Masonry>
           </Stack>
